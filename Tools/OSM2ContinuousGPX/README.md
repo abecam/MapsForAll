@@ -1,3 +1,28 @@
+The OSM to GPX tool is heavily based on BasicOSMParser, see Readme below. The tool is a standalone graphical tool, with the entry point being com.tgb.mapextractor.view.MainWindow
+It is quite rough around the edges, as it main purpose was only to demonstrate the possibility to have map on a certain type of device (without success as these devices are still waiting for their maps). But it works.
+
+Usage
+-----
+
+You first need to open an OSM file. You can extract an OSM from OpenStreeMap or other site. As the resulting file will be a contiguous path, and as GPX paths are generally quite limited in how many nodes they can have (1000 on a Suunto Spartan for instance), you probably need to select a small area. But it also strongly depends on how many intersections there are: the path need to pass through all intersection and will often do it more than once (without alternative). The tool is also stochastic and will try many solutions to select the best ones. Trying a "smart" alrogithm to find the best one is in most cases impossible. So it just tries something simple (marking where it passes to privilege where it didn't pass yet) and go at random.
+
+
+Next you need to select which routes you want to follow. Once you see the map, you can scroll using the arrow keys, zoom using "+" and "-" and paint what to select using the mouse, by pressing the left button. Use the mouse-wheel to make the brush bigger or smaller. The default mode of selection is by point, but it is often better to select by segment, and sometime by way. But ways can be very long. To remove a selection, use the right mouse button. Be careful that the path need to be contiguous, otherwise the tool will probably only convert a part of it - such orphans have been planned but are currently not properly managed.
+
+
+To start the conversion, press Transform to GPX. It will computes many solutions (400 as the date of writing) and keep 20. It will then visualise the first solution and you can see the other ones by pressing "Select next solution".
+The statistic are present (nb of resulting points being the simplest and most important) but currently not shown. But if there are too many points, a degradation might be needed -> "Do the degradation". This will remove points in several passes depending on the angle. Most importantly it won't touch the intersections. 
+
+
+You can change the parameter of the degradation by changing the 3 numbers. In order: Max angle for degradation, all nodes being separated by an angle above will be untouched, default 15, Incr. of angle, each iteration will allow to remove nodes with a bigger number (so 15+3, then 18+3, ...), default being 3, and the Nb of iterations, default 15.
+
+
+If the degradation is not good, "Reset to original" restore the selected path.
+
+
+Once you are happy with the result, don't forget to save the resulting GPX -> File -> Save result as.
+
+
 BasicOSMParser
 ==============
 

@@ -549,7 +549,7 @@ public class DrawMap4 extends JLabel implements MouseListener, MouseWheelListene
                 "zoomIn");
 		actionMap.put("zoomIn",
                 new ZoomAction(0.1f));
-		inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_SEPARATOR, 0),
+		inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_ADD, 0),
                 "zoomIn");
 		actionMap.put("zoomIn",
 				new ZoomAction(0.1f));

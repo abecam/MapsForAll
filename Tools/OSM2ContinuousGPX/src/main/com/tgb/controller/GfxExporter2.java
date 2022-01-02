@@ -24,20 +24,10 @@ import info.pavie.basicosmparser.model.Node;
 import info.pavie.basicosmparser.model.Relation;
 import info.pavie.basicosmparser.model.Way;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.Map;
-
-import org.apache.commons.compress.utils.ByteUtils;
-import org.apache.commons.io.FileUtils;
 
 import com.tgb.gfx.DrawMap3;
 import com.tgb.model.MapElement;

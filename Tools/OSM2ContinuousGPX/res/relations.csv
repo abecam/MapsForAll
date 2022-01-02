@@ -1,0 +1,2 @@
+ID;UserID;timestamp;isVisible;version;changesetID;members;tags
+R56688;56190;2011-01-12T14:23:49Z;true;28;6947637;"[N298884269=stop,N261728686=null,W26659127=path,N298884272=null]";"[ref=123,route=bus,name=Küstenbus Linie 123,type=route,operator=Regionalverkehr Küste,network=VVW]"

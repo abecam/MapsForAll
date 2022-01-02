@@ -6,7 +6,7 @@ The goal of this project was to bring maps to devices not supporting them, such 
 ![Map on Suunto](images/image7.jpg "image_tooltip")
 
 
-![Corresponding Map](images/image.jpg "image_tooltip")
+![Corresponding Map](images/image5.jpg "image_tooltip")
 
 
 I have worked on that for quite a while, bought the Fenix 3 to do prototyping, got a prototype running on it using raster map (the user SDK of Garmin is actually very bad with vector data (for some good reasons, not attacking Garmin on that)). The creation part is also somewhere in this project (but not part of the graphical tool).

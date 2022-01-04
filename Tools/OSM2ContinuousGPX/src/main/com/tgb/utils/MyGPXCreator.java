@@ -11,8 +11,12 @@ import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.XMLWriter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MyGPXCreator {
+	private static Logger logger = LoggerFactory.getLogger(MyGPXCreator.class);
+	
 	Document document;
 	Element root;
 	Element track;
@@ -25,7 +29,7 @@ public class MyGPXCreator {
 		root.addAttribute("version", "1.1");
 		root.addAttribute("creator", "Map2GPX");
 		
-		// Must be a continuous track, we will need to push all close pathes together!
+		// Must be a continuous track, we will need to push all close paths together!
 		addNewTrack();
 	}
 	
@@ -66,6 +70,7 @@ public class MyGPXCreator {
 		catch (IOException e) 
 		{
 			e.printStackTrace();
+			logger.error("Could not save: ", e);
 		}
 	}
 
@@ -82,6 +87,7 @@ public class MyGPXCreator {
 		catch (IOException e) 
 		{
 			e.printStackTrace();
+			logger.error("Could not save: ", e);
 		}
 	}
 }

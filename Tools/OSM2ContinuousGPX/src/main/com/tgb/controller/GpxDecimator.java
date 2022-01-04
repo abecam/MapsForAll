@@ -78,7 +78,7 @@ public class GpxDecimator {
 								// End of the way
 								endOfWay = true;
 								
-								System.out.println("Stoping at "+iPoints+" on "+oneWay.myPoints.size());
+								System.out.println("Stopping at "+iPoints+" on "+oneWay.myPoints.size());
 							} // And keep it
 							// Be sure it is not an intersection and not already removed
 							else if (currentPoint.nbIntersect == 0 && !nodesToRemove.contains(currentPoint.forNodeId))

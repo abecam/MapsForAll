@@ -13,6 +13,8 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
+import java.io.File;
+
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -287,7 +289,12 @@ public class MainWindow extends JFrame implements MouseListener, MouseWheelListe
            System.out.println("You chose to save this file: " +
                 chooser.getSelectedFile().getName());
            
-           ourGpxProcessor.saveSelectedGPX(chooser.getSelectedFile());
+           File fileToBeSaved = chooser.getSelectedFile();
+           
+           if(!fileToBeSaved.getAbsolutePath().endsWith(".gpx")){
+        	    fileToBeSaved = new File(chooser.getSelectedFile() + ".gpx");
+        	}
+           ourGpxProcessor.saveSelectedGPX(fileToBeSaved);
         }
 	}
 
